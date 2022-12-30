@@ -1,0 +1,48 @@
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+    float sum = 0;
+    int number[8];
+
+    ofstream write("dataku.dat");
+    cout << "enter number" << endl;
+    for (int i = 0; i <= 8; i++)
+    {
+        if (i == 8)
+        {
+            write << 0;
+            break;
+        }
+
+        cin >> number[i];
+        write << number[i] << endl;
+    }
+    write.close();
+	
+	float rata;
+    ifstream ins("dataku.dat");
+    while (!ins.eof())
+    {
+        ins >> number[7];
+        sum = sum + number[7];
+    }
+    cout << "jumlah = "<< sum << endl;
+    rata = sum / 8;
+    cout << "rata = "<< rata << endl;
+    ins.close();
+
+    return 0;
+}
+1
+2
+3
+4
+5
+6
+7
+8
+0
