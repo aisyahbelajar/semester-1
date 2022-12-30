@@ -1,0 +1,10 @@
+import numpy as np
+
+a = np.array([[2,4],[1,3]])
+b = np.array([[1,2],[0,4]])
+print("deklarasi matriks :")
+print("A = ",a)
+print("B = ",b)
+mul = np.matmul(a,b)
+print("hasil perkalian:")
+print(mul)
