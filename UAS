@@ -1,0 +1,114 @@
+#include <iostream>
+#include <fstream>
+#include <stdio.h>
+#include <conio.h>
+#include <string>
+using namespace std;
+
+string tujuan[4] = { "wonokromo", "benowo", "kandangan","gubeng" };
+int harga[4] = { 10000,5000,7000,8000 };
+string kelas[3] = { "Ekonomi", "bisnis", "eksekutif" };
+string temp1[47], temp2[47];
+
+void cekharga() {
+    int i;
+    string xtujuan;
+    for (i = 0; i < 5; i++) {
+        if (tujuan[i] == xtujuan)
+            cout << tujuan[i] << " dengan harga " << harga[i];
+    }
+}
+
+void tujuanawal() { //daftar keberangkatan dan harga
+    string xtujuan, ytujuan, teks, stasiun, Y, y;
+    ifstream ins("tujuan.txt");
+    if (ins.is_open()) {
+        while (getline(ins, teks)) {
+            cout << teks << endl;
+        }
+        ins.close();
+    }
+    cout << ">>>cek harga<<<" << endl;
+    cout << "masukkan asal : ";
+    cin >> xtujuan;
+
+    cout << "masukkkan tujuan : ";
+    cin >> ytujuan;
+    cekharga();
+
+    cout << "mau cek harga lagi? : (y/t) ";
+    cin >> Y;
+    if (Y == "y") {
+        cekharga();
+    } else if (Y != y)
+        main
+}
+
+
+int registrasi()
+{
+    char nama[25], alamat[40], iden[20];
+    string mail, nakur, L, P, jk;
+    int nokur;
+    cin.ignore();
+    cout << "\n------------------------------------------------" << endl;
+    cout << "Form Registrasi calon penumpang" << endl;
+    cout << "------------------------------------------------" << endl;
+    cout << "Nama Pemesan\t\t: "; cin.getline(nama, sizeof nama);
+    cout << "Alamat\t\t\t: "; cin.getline(alamat, sizeof alamat);
+    cout << "Identitas\t\t: "; cin.getline(iden, sizeof iden);
+
+jenkel:
+    cout << "Jenis Kelamin(L/P)\t: "; cin >> jk;
+    if (jk == "l" and jk == "p") {
+        goto lanjut;
+    }
+    else if (jk != "l" and jk != "p") {
+        goto jenkel;
+    }
+lanjut:
+    cout << "No. HP\t\t\t: "; cin >> nokur;
+    cout << "E-Mail\t\t\t: "; cin >> mail;
+    cout << "------------------------------------------------";
+    system("cls");
+
+    return 0;
+}
+
+
+int main() {
+    string nama, menuawal;
+    int pilihan;
+Menuawal:
+    cout << ">>>>>>> PEMESANAN TIKET KERETA PUTRA SURYA <<<<<<<\n" << endl;
+    cout << "1. Login Penumpang" << endl;
+    cout << "2. Daftar Keberangkatan dan Harga" << endl;
+    cout << "3. Pesan Tiket" << endl;
+    cout << "4. Riwayat Pemesanan\n" << endl;
+    cout << "Masukkan pilihan : ";
+    cin >> pilihan;
+    switch (pilihan) {
+    case 1://menu login penumpang
+        registrasi();
+        break;
+    case 2://menu daftar keberangkatan dan harga
+        tujuanawal();
+    case 3: //pesan tiket
+        pesantiket();
+    case 4: //riwayat pemesanan
+    }
+back:
+    cout << "kembali ke menu awal ? (y/n) : ";
+    cin >> menuawal;
+    if (menuawal == "y" || menuawal == "Y") {
+        goto Menuawal;
+    }
+    else if (menuawal == "n" || menuawal == "N") {
+        break;
+    }
+    else {
+        goto back;
+    }
+}
+
+
