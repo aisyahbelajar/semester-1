@@ -1,0 +1,15 @@
+#include <fstream>;
+#include <iostream>;
+using namespace std;
+int main()
+{
+    ifstream ins;
+    string kota;
+    ins.open("namakota.txt");
+    while (!ins.eof())
+    {
+        ins >> kota;
+        cout << kota << endl;
+    }
+    ins.close();
+}
