@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main (){
+	int masuk,pulang,total;
+	cout << "program ini dibuat untuk menentukan lama kerja seorang pegawai"<<endl;
+	cout << " masukkan jam masuk anda "<<endl;
+	cin >> masuk;
+	switch (masuk){
+		case 1 : case 2 : case 3 : case 4 : case 5 : case 6 : 
+		case 7 : case 8 : case 9 : case 10 : case 11 : 
+		case 12 : break;
+		default : cout << "jam masuk anda salah,masukkan angka 1-12"<<endl;
+		cin >>masuk;
+	} 
+	cout << "masukkan jam pulang"<<endl;
+	cin >>pulang;
+	if (pulang <0 || pulang >12){
+		cout << "jam pulang anda salah,masukkan angka 1-12"<<endl;
+		cin >>pulang;
+	} 
+	
+	if (pulang < masuk ){
+		pulang = pulang + 12;
+	}
+	total = pulang-masuk;
+	cout << "jam masuk anda = "<< masuk <<endl;
+	cout << "jam pulang anda = "<< pulang <<endl;
+	cout << "lama bekerja anda = "<<total<< " jam"<<endl; 
+}
