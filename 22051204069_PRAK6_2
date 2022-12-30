@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+//fungsi menghitung luas bujursangkar 1
+double luas_bujursangkar1(double sisi1) {
+	double luas1 = sisi1 * sisi1;
+	return luas1;
+}
+
+//fungsi menghitung luas bujursangkar 2
+double luas_bujursangkar2(double sisi2) {
+	double luas2 = sisi2 * sisi2;
+	return luas2;
+}
+
+//fungsi menghitung jumlah dua luas bujursangkar
+double jumlah_luas(double luas_bujursangkar1, double luas_bujursangkar2) {
+	double jumlah = luas_bujursangkar1 + luas_bujursangkar2;
+	return jumlah;
+}
+
+int main() {
+	double sisi1, sisi2, luas1, luas2;
+	cout << "panjang sisi bujursangkar 1 = ";
+	cin >> sisi1;
+	cout << "panjang sisi bujursangkar 2 = ";
+	cin >> sisi2;
+
+	cout << "Luas bujursangkar 1 adalah = ";
+	cout << luas_bujursangkar1(sisi1) << endl;
+	cout << "Luas bujursangkar 2 adalah = ";
+	cout << luas_bujursangkar2(sisi2) << endl;
+
+	cout << "Jumlah luas kedua bujursangkar tersebut adalah = ";
+	cout << jumlah_luas(luas_bujursangkar1(sisi1), luas_bujursangkar2(sisi2)) << endl;
+	return 0;
+}
