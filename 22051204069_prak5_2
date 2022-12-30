@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{   
+    string namamahasiswa[100];
+    int n, matakuliah, j, i;
+    int rapor[100][5];
+    float rata[100], sum[100];
+    cout << "rapor siswa" << endl;
+
+    cout << " masukkan jumlah mahasiswa yang diinput : ";
+    cin >> n;
+    cout << endl;
+
+    for (i = 0; i < n; i++) {
+        cout << "masukkan nama mahasiswa : ";
+        cin >> namamahasiswa[i];
+        for (j = 0; j < 5; j++) {
+            cout << "nilai mahasiswa ke " << i + 1;
+            cout << " pada matkul ke " << j + 1 << " : ";
+            cin >> rapor[i][j];
+            sum[j] += rapor[i][j];
+
+        }
+        cout << endl;
+    }
+    cout << endl;
+    cout << "hasil rapor" << endl;
+    for (i = 0; i < n; i++) {
+        cout << endl;
+        cout << namamahasiswa[i] <<"  ";
+        for (j = 0; j < 5; j++) {
+            cout << rapor[i][j] << "  ";
+        } 
+    }
+
+        cout << endl<< endl;
+    for (i = 0; i < 5; i++) {
+        rata[i] = sum[i] / float(n);
+        cout << " rata mata kuliah ke "<< i+1<<" : " <<rata[i]<<"    ";
+        cout << endl;
+    }
+
+        cout << endl;
+        return 0;
+}
