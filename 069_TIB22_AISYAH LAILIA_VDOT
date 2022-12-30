@@ -1,0 +1,10 @@
+import numpy as np
+
+a = (4,2,-1)
+b = [3,-4,-3] 
+print("original matrix:") 
+print(a)
+print (b)
+result1= np.vdot (a, b)
+print("Result of vector dot multiplication:") 
+print (result1)
