@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int uang, bunga, bulan;
+    
+    
+    uang = 1000000;
+    for (bulan = 1; bulan <= 10; bulan++) {
+        uang =(uang + uang * 0.02);
+        cout << "bulan ke "<<bulan<< " = ";
+		cout << uang << endl;
+    }
+    return 0;
+}
+
