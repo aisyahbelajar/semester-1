@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+	int i;
+	cout << "selamat datang di toko surya" << endl;
+	char barang[5][20] = { "sabun","sampo","beras","pensil","minyak" };
+	char harga[5][10] = { "4000","2000","13000","1000","5000" };
+	char kode[5][6] = { "sbn","smp","brs","psl","myk" };
+	string code;
+
+	cout << " daftar  menu kode barang :" << endl;
+	for (i = 0; i < 4; i++) {
+		cout << barang[i] << " = " << kode[i] << endl << endl;
+	}
+
+	cout << "masukkan kode barang ";
+	cin >> code;
+	for (i = 0; i < 4; i++) {
+		if (code == kode[i]) {
+			cout << "nama barang : " << barang[i] << endl;
+			cout << "harga : " << harga[i];
+		}
+		else
+			cout << "kode anda salah" << endl;
+		break;
+	}
+}
+	
+		
+		
+
+
+	
+
+
