@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main (){
+	int i;
+	string nama;
+	string matkul[7] = {"ilmu falak","balaghoh","ilmu tafsir","qowaid fiqih","tarikh","tauhid","hadits"};
+	int A[i];
+	
+	cout<<"selamat datang di program penentuan nilai kelulusan"<<endl;
+	cout<<"masukan nama mahasiswa = ";
+	cin>>nama;
+	cout<<endl;
+	for(i=0;i<7;i++){
+		cout<<"masukkkan nilai "<<matkul[i]<<" = ";
+		cin>>A[i];
+	}
+	cout<<endl<<"mahasiswa dengan nama "<<nama<<" telah lulus pada mata kuliah :"<<endl;
+	
+	for(i=0;i<7;i++){
+		if(A[i] >= 60){
+			cout<<matkul[i]<<endl;
+		}
+		
+}
+return 0;
+}
