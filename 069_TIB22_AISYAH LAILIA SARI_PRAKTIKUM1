@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+	float a,b,total,keuntungan;
+	
+	cout << "selamat datang di toko aisyah" <<endl;
+	cout << "masukkan harga barang yang dibeli = "<<endl;
+	cin >> a;
+	cout << "berapa jumlah barang yang dibeli = "<<endl;
+	cin >> b;
+	
+	total = a * b;
+	keuntungan = total * 30/100;
+	
+	cout << "keuntungan nya adalah "<< keuntungan<<endl;
+	cout << "total adalah "<< total <<endl;
+	
+	cin.get();
+	return 0; 
+}
