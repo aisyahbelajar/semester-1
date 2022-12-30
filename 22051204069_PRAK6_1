@@ -1,0 +1,20 @@
+yinclude<iostream>
+using namespace std;
+
+int genap(int a) {
+	return a % 2;
+}
+int main() {
+	int a;
+	cout << "masukkan angka yang diingikan = ";
+	cin >> a;
+	
+	genap(a);
+	if (genap(a) == 1) {
+		cout << "angka tersebut adalah angka ganjil \n";
+	} else {
+		cout << "angka tersebut adalah angka genap \n";
+	}		
+}
+
+
