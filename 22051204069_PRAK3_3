@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+	int i, a, a1, n, nimax, nimin;
+	float total, rata;
+	
+	cout << "berapa nilai yang akan dimasukkan"<<endl;
+	cin >> n;
+	cout<<"masukkan nilai pertama"<<endl;
+	cin >> a;
+	
+	nimin= a;
+	nimax = a;
+	total =a;
+	
+	for (i=2; i <=n; i++){
+		cout<<"masukkan nilai ke-"<<i <<" = "<<endl;
+		cin >> a;
+		
+		if(a >= nimax){
+			nimax = a;
+		} else if(a<=nimin){
+			nimin = a;
+		}
+		total = total +a;
+	}
+	
+	rata = total/n;
+
+	cout<< "nilai maksimal = "<< nimax<<endl;
+	cout<< "nilai minimal = "<< nimin<<endl;
+	cout<< "rata rata = "<< rata ;
+	cout<< "\n";
+	cout<< "program selesai"<<endl;
+	
+}
