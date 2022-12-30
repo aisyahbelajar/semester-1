@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main (){
+	int counter,sum,N;
+	cout << "enter the number of positive integers = ";
+	cin >> N;
+	sum = 0;
+	counter = 1;
+	
+	while (counter <= N){
+		sum += counter;
+		counter++;
+	}
+	
+	cout << "the sum of the first "<<N<< " positive integers is "<<sum <<endl;
+	cout << "the end"<<endl;
+	
+	cin.get();
+	return 0;
+	
+}
